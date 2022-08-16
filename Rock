@@ -1,0 +1,56 @@
+print("Welcome to the Rock,Paper,Scissors Game")
+import random
+
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+inp = int(input("Enter 0 for the Rock ,1 for the Paper,2 for the Scissors"))
+game = [rock, paper, scissors]
+com = random.choice(game)
+print("Your Choice")
+print(game[inp])
+print("Computer Choice")
+print(com)
+if inp == 0:
+    if com == paper:
+        print("You lose")
+    elif com == scissors:
+        print("You Win")
+    else:
+        print("Game drawn")
+elif inp == 1:
+    if com == rock:
+        print("You Win")
+    elif com == scissors:
+        print("You Lose")
+    else:
+        print("Game drawn")
+
+else:
+    if com == paper:
+        print("You Win")
+    elif com == rock:
+        print("You Lose")
+    else:
+        print("Game drawn")
